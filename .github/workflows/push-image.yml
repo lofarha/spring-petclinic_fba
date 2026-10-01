@@ -46,9 +46,9 @@ jobs:
 
       - name: Tag and push image to GHCR
         run: |
-          docker tag spring-petclinic_fba:${{ steps.get_version.outputs.version }} ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic:${{ steps.get_version.outputs.version }}
-          docker tag spring-petclinic_fba:${{ steps.get_version.outputs.version }} ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic:${{ github.sha }}
-          docker tag spring-petclinic_fba:${{ steps.get_version.outputs.version }} ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic:latest
+          docker tag spring-petclinic_fba:${{ steps.get_version.outputs.version }} ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic_fba:${{ steps.get_version.outputs.version }}
+          docker tag spring-petclinic_fba:${{ steps.get_version.outputs.version }} ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic_fba:${{ github.sha }}
+          docker tag spring-petclinic_fba:${{ steps.get_version.outputs.version }} ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic_fba:latest
 
           docker push ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic_fba:${{ steps.get_version.outputs.version }}
           docker push ghcr.io/${{ env.OWNER_LOWER }}/spring-petclinic_fba:${{ github.sha }}
